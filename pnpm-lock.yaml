@@ -67,6 +67,9 @@ devDependencies:
   tailwindcss:
     specifier: ^3.4.1
     version: 3.4.3
+  tsx:
+    specifier: ^4.7.3
+    version: 4.7.3
   typescript:
     specifier: ^5
     version: 5.4.5
@@ -3896,6 +3899,17 @@ packages:
       tslib: 1.14.1
       typescript: 5.4.5
     dev: false
+
+  /tsx@4.7.3:
+    resolution: {integrity: sha512-+fQnMqIp/jxZEXLcj6WzYy9FhcS5/Dfk8y4AtzJ6ejKcKqmfTF8Gso/jtrzDggCF2zTU20gJa6n8XqPYwDAUYQ==}
+    engines: {node: '>=18.0.0'}
+    hasBin: true
+    dependencies:
+      esbuild: 0.19.12
+      get-tsconfig: 4.7.3
+    optionalDependencies:
+      fsevents: 2.3.3
+    dev: true
 
   /type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
