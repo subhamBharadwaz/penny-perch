@@ -119,4 +119,3 @@ EXCEPTION
         NULL;
 END
 $$;
-
