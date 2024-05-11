@@ -1,9 +1,22 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Inter as FontSans } from 'next/font/google';
+import localFont from 'next/font/local';
 import './globals.css';
 import { ClerkProvider } from '@clerk/nextjs';
+import { cn } from '@/lib/utils';
 
-const inter = Inter({ subsets: ['latin'] });
+const fontSans = FontSans({
+  subsets: ['latin'],
+  variable: '--font-sans',
+});
+
+const fontHeading = localFont({
+  src: '../../assets/fonts/SpaceGrotesk-Bold.ttf',
+  variable: '--font-heading',
+  weight: '700',
+  display: 'swap',
+  style: 'normal',
+});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -18,7 +31,11 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={inter.className}>{children}</body>
+        <body
+          className={cn('font-sans', fontSans.variable, fontHeading.variable)}
+        >
+          {children}
+        </body>
       </html>
     </ClerkProvider>
   );
